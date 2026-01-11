@@ -8,11 +8,13 @@ app = FastAPI(title="Chat App",version="1.0.0")
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["http://localhost:5173",
-                   "https://your-frontend-name.onrender.com"],
+    allow_origins=[
+        "http://localhost:5173",
+        "https://blinkf.onrender.com"
+    ],
     allow_credentials=True,
-    allow_methods=["*"],   
-    allow_headers=["*"],   
+    allow_methods=["*"],
+    allow_headers=["*"],
 )
 
 Base.metadata.create_all(bind=engine)
